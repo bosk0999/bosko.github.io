@@ -1,5 +1,3 @@
-// ===== Texte qui s'écrit tout seul =====
-// Modifie cette liste avec tes propres titres
 const roles = [
   "Développeur Roblox / Luau",
   "Créateur de jeux",
@@ -36,7 +34,6 @@ function type() {
 
 type();
 
-// ===== Lueur qui suit la souris =====
 const glow = document.getElementById("cursorGlow");
 
 window.addEventListener("mousemove", (e) => {
@@ -44,7 +41,6 @@ window.addEventListener("mousemove", (e) => {
   glow.style.top = e.clientY + "px";
 });
 
-// ===== Pas de lueur sur mobile/tactile =====
 if (window.matchMedia("(hover: none)").matches) {
   glow.style.display = "none";
 }
