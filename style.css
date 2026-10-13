@@ -245,10 +245,19 @@ a {
 
 .socials {
   display: flex;
-  gap: 26px;
+  flex-wrap: wrap;
+  gap: 14px 26px;
 }
 
-.socials a {
+.socials button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.socials a,
+.socials button {
   color: var(--muted);
   font-size: 0.92rem;
   letter-spacing: 1px;
@@ -256,7 +265,8 @@ a {
   transition: color 0.25s, transform 0.25s;
 }
 
-.socials a:hover {
+.socials a:hover,
+.socials button:hover {
   color: var(--blue-light);
   transform: translateY(-2px);
 }
