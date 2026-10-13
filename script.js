@@ -1,7 +1,6 @@
 const roles = [
-  "Développeur Roblox / Luau",
-  "Créateur de jeux",
-  "Passionné de code"
+  "Animateur Roblox",
+  "Apprenti Informaticien"
 ];
 
 const typedEl = document.getElementById("typed");
@@ -44,3 +43,19 @@ window.addEventListener("mousemove", (e) => {
 if (window.matchMedia("(hover: none)").matches) {
   glow.style.display = "none";
 }
+
+const discordBtn = document.getElementById("discordBtn");
+const discordLabel = discordBtn.textContent;
+
+discordBtn.addEventListener("click", () => {
+  navigator.clipboard.writeText("b.sko")
+    .then(() => {
+      discordBtn.textContent = "Pseudo copié !";
+      setTimeout(() => {
+        discordBtn.textContent = discordLabel;
+      }, 1800);
+    })
+    .catch(() => {
+      console.warn("copie KO");
+    });
+});
